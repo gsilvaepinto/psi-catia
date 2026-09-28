@@ -234,6 +234,19 @@
             transition: all .3s;
         }
 
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
         /* Mobile menu */
         .mobile-menu {
             display: none;
@@ -2712,8 +2725,15 @@
 
         // Mobile menu
         const mMenu = document.getElementById('mobileMenu');
-        document.getElementById('hamburger').addEventListener('click', () => mMenu.classList.toggle('open'));
-        function closeMobile() { mMenu.classList.remove('open'); }
+        const mBtn = document.getElementById('hamburger');
+        mBtn.addEventListener('click', () => {
+            mMenu.classList.toggle('open');
+            mBtn.classList.toggle('open');
+        });
+        function closeMobile() {
+            mMenu.classList.remove('open');
+            mBtn.classList.remove('open');
+        }
 
         // Scroll reveal
         const obs = new IntersectionObserver(entries => {
