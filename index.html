@@ -1883,7 +1883,7 @@
         .arte-track {
             display: flex;
             width: 100%;
-            transition: transform .6s cubic-bezier(.77,0,.18,1);
+            transition: transform .6s cubic-bezier(.77, 0, .18, 1);
         }
 
         .arte-slide {
@@ -1904,13 +1904,13 @@
             height: auto;
             object-fit: contain;
             display: block;
-            box-shadow: 0 8px 40px rgba(34,9,1,.12);
+            box-shadow: 0 8px 40px rgba(34, 9, 1, .12);
             transition: transform .6s ease, box-shadow .6s ease;
         }
 
         .arte-slide img:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 56px rgba(34,9,1,.18);
+            box-shadow: 0 16px 56px rgba(34, 9, 1, .18);
         }
 
         .arte-controls {
@@ -2014,10 +2014,23 @@
                 gap: .5rem;
             }
 
-            #artePrev { font-size: 0; }
-            #artePrev::after { content: '←'; font-size: 1rem; }
-            #arteNext { font-size: 0; }
-            #arteNext::after { content: '→'; font-size: 1rem; }
+            #artePrev {
+                font-size: 0;
+            }
+
+            #artePrev::after {
+                content: '←';
+                font-size: 1rem;
+            }
+
+            #arteNext {
+                font-size: 0;
+            }
+
+            #arteNext::after {
+                content: '→';
+                font-size: 1rem;
+            }
 
             .arte-slide:first-child img {
                 width: 100% !important;
@@ -2163,9 +2176,18 @@
                 <div class="sobre-content">
                     <div class="sobre-head">
                         <p class="s-tag rv">Sobre Mim</p>
-                        <h2 class="rv d1">Uma psicóloga que o/a guia para mudanças<br class="desktop-only">profundas com empatia e gentileza.</h2>
+                        <h2 class="rv d1">Uma psicóloga que o/a guia para mudanças<br class="desktop-only">profundas com
+                            empatia e gentileza.</h2>
                     </div>
-                    <p class="sobre-intro rv d2">Desde cedo que me fascina o ser humano — emoções, pensamentos, comportamentos. A curiosidade levou-me a investir em diversas formações e a fazer a minha própria jornada de autoconhecimento, onde descobri a força dos processos de transformação e dos movimentos internos que ampliam a consciência.<br><br>Gosto de ouvir cada estória e caminhar ao lado de quem procura uma versão mais inteira de si. Cada percurso é único e carrega sabedoria, como o casulo que se abre para a borboleta voar.<br><br>Acredito em mudanças profundas: reconstruir estruturas internas, crenças, libertar padrões e integrar o merecimento, a autoestima e descobrir quem se é. É nesse processo que nasce um novo capítulo, onde cada pessoa se torna mestre da sua própria história.</p>
+                    <p class="sobre-intro rv d2">Desde cedo que me fascina o ser humano — emoções, pensamentos,
+                        comportamentos. A curiosidade levou-me a investir em diversas formações e a fazer a minha
+                        própria jornada de autoconhecimento, onde descobri a força dos processos de transformação e dos
+                        movimentos internos que ampliam a consciência.<br><br>Gosto de ouvir cada estória e caminhar ao
+                        lado de quem procura uma versão mais inteira de si. Cada percurso é único e carrega sabedoria,
+                        como o casulo que se abre para a borboleta voar.<br><br>Acredito em mudanças profundas:
+                        reconstruir estruturas internas, crenças, libertar padrões e integrar o merecimento, a
+                        autoestima e descobrir quem se é. É nesse processo que nasce um novo capítulo, onde cada pessoa
+                        se torna mestre da sua própria história.</p>
                     <div class="sobre-section rv">
                         <div class="sobre-section-label">
                             <h4>Percurso<br>Académico</h4>
@@ -2205,12 +2227,16 @@
             <div class="arte-head rv">
                 <p class="s-tag">Arte</p>
                 <h2>Lorem ipsum dolor sit amet.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur.</p>
             </div>
             <div class="arte-gallery rv">
                 <div class="arte-carousel">
                     <div class="arte-track" id="arteTrack">
-                        <div class="arte-slide"><img src="arte/quadro1.jpeg" alt="Arte Cátia Raposo" style="width:75%;max-height:none;"></div>
+                        <div class="arte-slide"><img src="arte/quadro1.jpeg" alt="Arte Cátia Raposo"
+                                style="width:75%;max-height:none;"></div>
                         <div class="arte-slide"><img src="arte/quadro2.jpeg" alt="Arte Cátia Raposo"></div>
                         <div class="arte-slide"><img src="arte/quadro3.jpeg" alt="Arte Cátia Raposo"></div>
                     </div>
