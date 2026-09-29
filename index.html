@@ -2038,6 +2038,55 @@
                 max-height: 360px !important;
             }
         }
+
+        /* ── LIGHTBOX ── */
+        #arteLightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(22, 9, 1, .92);
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+
+        #arteLightbox.open {
+            display: flex;
+        }
+
+        #arteLightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            cursor: default;
+            box-shadow: 0 20px 80px rgba(0,0,0,.5);
+        }
+
+        #arteLightboxClose {
+            position: fixed;
+            top: 1.4rem;
+            right: 1.8rem;
+            background: none;
+            border: 1px solid rgba(255,255,255,.3);
+            color: var(--cream);
+            width: 40px;
+            height: 40px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .3s;
+        }
+
+        #arteLightboxClose:hover {
+            background: rgba(255,255,255,.1);
+        }
+
+        .arte-slide img {
+            cursor: zoom-in;
+        }
     </style>
 
     <!-- Dados Estruturados (Schema.org) — substituir o domínio pelo URL real -->
@@ -2893,6 +2942,12 @@
         </div>
     </template>
 
+    <!-- LIGHTBOX -->
+    <div id="arteLightbox">
+        <button id="arteLightboxClose">✕</button>
+        <img id="arteLightboxImg" src="" alt="">
+    </div>
+
     <script>
         // Custom cursor
         const dot = document.getElementById('cDot');
@@ -2942,6 +2997,20 @@
                 const wasOpen = item.classList.contains('open');
                 document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
                 if (!wasOpen) item.classList.add('open');
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('arteLightbox');
+        const lightboxImg = document.getElementById('arteLightboxImg');
+        document.getElementById('arteLightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+        document.querySelectorAll('.arte-slide img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('open');
             });
         });
 
