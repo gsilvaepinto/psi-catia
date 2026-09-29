@@ -2608,16 +2608,14 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
-        <section id="contacto">
+    </template>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
             <div class="section-inner cont-grid">
                 <div class="cont-info">
-                    <h2 class="rv d1">Vamos conversar?</h2>
-                    <p class="rv d2">Já teve a coragem de chegar até aqui. Este pode ser o momento certo para dar o
-                        próximo
-                        passo no cuidado da sua saúde mental e bem-estar emocional. Entre em contacto, estou aqui para
-                        o/a
-                        ajudar.</p>
+                    <h2 class="rv d1">Lorem ipsum dolor?</h2>
+                    <p class="rv d2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                     <div class="c-details rv d3">
                         <div class="c-item">
                             <div class="c-icon">
@@ -2627,9 +2625,7 @@
                                     <circle cx="12" cy="10" r="3" />
                                 </svg>
                             </div>
-                            <div class="c-text"><strong>Localização</strong>Avenida D. João IV, Centro Comercial Villa
-                                Loja
-                                nº 58<br>4810-534 Guimarães</div>
+                            <div class="c-text"><strong>Localização</strong>Lorem ipsum, Caldas da Rainha</div>
                         </div>
                         <div class="c-item">
                             <div class="c-icon">
@@ -2639,11 +2635,11 @@
                                         d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                                 </svg>
                             </div>
-                            <div class="c-text"><strong>Telefone</strong>+351 926 548 572</div>
+                            <div class="c-text"><strong>Telefone</strong>+351 9XX XXX XXX</div>
                         </div>
                         <div class="c-item">
                             <div class="c-icon" style="font-size:1.4rem">@</div>
-                            <div class="c-text"><strong>E-mail</strong>psicologia@raizesdoeu.pt</div>
+                            <div class="c-text"><strong>E-mail</strong>lorem@ipsum.pt</div>
                         </div>
                         <div class="c-item">
                             <div class="c-icon" style="font-size:1.4rem">◷</div>
@@ -2652,9 +2648,6 @@
                     </div>
                 </div>
                 <form class="cont-form rv" id="contForm" novalidate>
-                    <input type="hidden" name="access_key" value="b27ca15e-e2ae-48dd-a04c-dca0656c8d0a">
-                    <input type="hidden" name="subject" value="Nova mensagem — Raízes do Eu">
-                    <input type="hidden" name="from_name" value="Raízes do Eu — Website">
                     <div class="form-row">
                         <div class="fg"><label for="nome">Nome</label><input type="text" id="nome" name="nome"
                                 placeholder="O seu nome" required></div>
@@ -2687,8 +2680,9 @@
                     </div>
                 </form>
             </div>
-        </section>
+    </section>
 
+    <template>
         <!-- FOOTER -->
         <footer>
             <div class="foot-inner">
@@ -2991,44 +2985,9 @@
             });
         });
 
-        // Form submit via Web3Forms
-        document.getElementById('contForm').addEventListener('submit', async e => {
+        // Form submit
+        document.getElementById('contForm').addEventListener('submit', e => {
             e.preventDefault();
-            const form = e.target;
-            const btn = form.querySelector('.btn-send');
-            const success = document.getElementById('fSuccess');
-            const error = document.getElementById('fError');
-
-            if (!form.querySelector('#rgpd').checked) {
-                error.style.display = 'block';
-                setTimeout(() => { error.style.display = 'none'; }, 5000);
-                return;
-            }
-            error.style.display = 'none';
-
-            btn.disabled = true;
-            btn.textContent = 'A enviar...';
-
-            const data = new FormData(form);
-            try {
-                const res = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: data
-                });
-                const json = await res.json();
-                if (json.success) {
-                    success.style.display = 'block';
-                    form.reset();
-                    setTimeout(() => { success.style.display = 'none'; }, 6000);
-                } else {
-                    alert('Erro ao enviar a mensagem. Por favor tente novamente ou contacte por e-mail.');
-                }
-            } catch {
-                alert('Sem ligação. Por favor tente novamente.');
-            } finally {
-                btn.disabled = false;
-                btn.textContent = 'Vamos conversar?';
-            }
         });
 
         // Política de Privacidade modal
