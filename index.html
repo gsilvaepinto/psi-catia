@@ -585,7 +585,7 @@
 
         .quote-txt {
             font-family: 'Cormorant Upright', serif;
-            font-size: clamp(1.4rem, 3.2vw, 2.6rem);
+            font-size: clamp(1.6rem, 3.8vw, 3rem);
             font-weight: 300;
             font-style: italic;
             line-height: 1.45;
@@ -692,16 +692,7 @@
         }
 
         .sobre-section-label {
-            position: sticky;
-            top: 11rem;
-        }
-
-        .sobre-section-label h4 {
-            font-family: 'Cormorant Upright', serif;
-            font-size: 1.4rem;
-            color: var(--forest);
-            font-weight: 400;
-            line-height: 1.2;
+            position: static;
         }
 
         .sobre-section-label::before {
@@ -713,21 +704,80 @@
             margin-bottom: .9rem;
         }
 
+        .sobre-section-label h4 {
+            font-family: 'Cormorant Upright', serif;
+            font-size: 1.4rem;
+            color: var(--forest);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
         .sobre-section-body p {
-            font-size: .97rem;
+            font-size: .93rem;
             color: var(--txt2);
-            line-height: 1.85;
-            margin-bottom: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1rem;
         }
 
         .sobre-section-body p:last-child {
             margin-bottom: 0;
         }
 
+        .exp-body {
+            max-height: 2000px;
+            overflow: hidden;
+            position: relative;
+            transition: max-height .7s ease;
+        }
+
+        .exp-body.collapsed {
+            max-height: 140px;
+        }
+
+        .exp-body.collapsed::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, var(--cream));
+            pointer-events: none;
+        }
+
+        .exp-toggle {
+            background: none;
+            border: none;
+            color: var(--forest);
+            font-family: 'Montserrat', sans-serif;
+            font-size: .75rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: .5rem 0;
+            margin-top: .6rem;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color .3s;
+            grid-column: 2;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .exp-toggle {
+                grid-column: 1;
+            }
+        }
+
+        .exp-toggle:hover {
+            color: var(--terra);
+        }
+
         @media (max-width: 768px) {
             .sobre-section {
                 grid-template-columns: 1fr;
-                gap: 1.2rem;
+                gap: 1rem;
+                padding: 2rem 1.4rem;
             }
 
             .sobre-section-label {
@@ -2216,7 +2266,7 @@
                 arte.<br><br>Acompanhamento psicológico online e presencial nas Caldas da Rainha à luz do EMDR e da
                 hipnose clínica. Complementado por aulas regulares de dança expressiva e movimento consciente, criando
                 um espaço que vai além da psicologia tradicional e integra corpo, emoção e expressão.</p>
-            <p class="ha ha3 hero-destaque" style="font-family:'Cormorant Upright',serif; font-size:clamp(1.2rem,2.2vw,1.6rem); font-style:italic; color:var(--forest); margin-top:1.6rem; line-height:1.4;">Integrar as raízes para mudar o <span style="color:var(--terra)">presente</span> e reconectar com a vida.</p>
+            <p class="ha ha3 hero-destaque" style="font-family:'Cormorant Upright',serif; font-size:clamp(1.6rem,2.8vw,2.2rem); font-style:italic; color:var(--forest); margin-top:1.6rem; line-height:1.4;">Integrar as raízes para mudar o <span style="color:var(--terra)">presente</span><br>e reconectar com a vida.</p>
             <a href="#contacto" class="btn-p ha ha4 mobile-only" style="margin-top:1.2rem;">Marcar Consulta</a>
         </div>
         <div class="hero-visual">
@@ -2259,28 +2309,27 @@
                             <h4>Percurso<br>Académico</h4>
                         </div>
                         <div class="sobre-section-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris.</p>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                            <p>O meu percurso começa muito antes da psicologia com uma licenciatura em português-alemão. A partir desse momento comecei a fazer yoga e com isso descobri o mundo do desenvolvimento pessoal em 1999. Fiz inúmeras formações alimentando o meu interesse e também fazendo o meu caminho.</p>
+                            <p>Mais tarde em 2018 termino a Licenciatura em Psicologia (Universidade Europeia) e em 2020 o mestrado em Psicologia Clínica e do Aconselhamento (Universidade Autónoma de Lisboa). Nesse percurso fiz estágio observacional no Hospital Júlio de Matos e na Casa da Barragem.</p>
+                            <p>Fiz também formação em Hipnose Clínica com a Cristina Fernandes e a Fátima Diniz da Reconstruir, assim como a formação de formadores. O meu estágio académico foi nas Irmãs Hospitaleiras no centro de dia como terapia de grupo.</p>
+                            <p>O meu estágio profissional foi feito na Clínica Horizonte na área das dependências químicas e comportamentais, tendo feito na mesma altura formação pela CRIAP de adições químicas e comportamentais e na Wecareon (consultas online). O meu interesse pela área do trauma leva-me ao EMDR, tendo feito o nível 1 e 2, sendo registada na Associação EMDR Portugal nº 431.</p>
+                            <p>E como a psicologia é um mundo tão rico e a arte sempre me mostrou uma forma tão bonita de ampliarmos processos internos, fiz um mestrado em terapias psicoexpressivas pelo IASE, continuei no ISPA com as bases da dança terapia. Segui para o curso de dança expressiva e movimento consciente e danças circulares.</p>
                         </div>
                     </div>
                     <div class="sobre-section rv">
                         <div class="sobre-section-label">
                             <h4>Experiência<br>Profissional</h4>
                         </div>
-                        <div class="sobre-section-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                officia deserunt mollit anim id est laborum.</p>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi
-                                architecto beatae vitae dicta sunt.</p>
+                        <div class="sobre-section-body exp-body collapsed" id="expBody">
+                            <p>O meu percurso profissional começou antes da psicologia, pois sou licenciada também em Línguas e Literaturas Modernas pela Universidade Nova de Lisboa. Trabalhei no gabinete de relações públicas no Ministério da Administração Interna, trabalhei como assistente de produção na RTP e fui coordenadora de uma escola em Oeiras em 2012.</p>
+                            <p>Depois do mestrado em psicologia, fiz em 2021 o estágio profissional na Clínica Horizonte, uma comunidade terapêutica, e na Wecareon, uma plataforma de consultas online. Aqui aprendi a facilitar sessões de grupo regulares, palestras, e a fazer consultas online.</p>
+                            <p>Mantenho-me na Wecareon e na WOW facilitando consultas online e particulares. Trabalho na Fábrica Bordallo Pinheiro com consultas presenciais.</p>
+                            <p>Acredito num cuidado psicológico que reconhece a história única de cada pessoa e a forma como as experiências, sobretudo as traumáticas, moldam o corpo, a mente e a forma de estar no mundo. Trabalho com uma abordagem que integra EMDR, hipnose clínica e outras práticas contemporâneas, procurando ir às origens do trauma, onde a dor se instalou, para que a transformação possa acontecer de forma profunda e segura.</p>
+                            <p>O meu foco é apoiar cada pessoa no processo de integração — compreender o que viveu, ressignificar memórias difíceis e fortalecer recursos internos. Acredito que o autoconhecimento, aliado a uma relação terapêutica sólida, promove empoderamento, aumento da autoestima e a capacidade de construir um caminho de mudança consistente e alinhado com quem se é.</p>
+                            <p>Ao longo dos anos, desenvolvi uma prática clínica assente na escuta ativa, na presença, na empatia e no respeito. Esta experiência permite-me trabalhar com diferentes histórias, ritmos e necessidades, sempre com respeito pela individualidade de cada pessoa.</p>
+                            <p>Atualmente, realizo acompanhamento psicológico presencial nas Caldas da Rainha e consultas online, oferecendo um espaço seguro para quem procura compreender-se, recuperar-se e reencontrar direção. Para além disso, dou aulas de dança expressiva e movimento consciente.</p>
                         </div>
+                        <button class="exp-toggle" id="expToggle" onclick="toggleExp()">Ver mais</button>
                     </div>
                 </div>
             </div>
@@ -3087,6 +3136,20 @@
                 if (!wasOpen) block.classList.add('open');
             });
         });
+
+        // Experiência expandir/colapsar
+        function toggleExp() {
+            const body = document.getElementById('expBody');
+            const btn = document.getElementById('expToggle');
+            const collapsed = body.classList.toggle('collapsed');
+            btn.textContent = collapsed ? 'Ver mais' : 'Ver menos';
+            if (collapsed) {
+                setTimeout(() => {
+                    const top = body.closest('.sobre-section').getBoundingClientRect().top + window.scrollY - 160;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }, 100);
+            }
+        }
 
         // Form submit
         document.getElementById('contForm').addEventListener('submit', e => {
