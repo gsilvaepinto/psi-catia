@@ -608,7 +608,7 @@
         }
 
         section {
-            padding: clamp(4rem, 7vw, 6rem) 5%;
+            padding: clamp(1.8rem, 4vw, 3.5rem) 5%;
         }
 
         .s-tag {
@@ -796,6 +796,10 @@
 
             .sobre-section-label {
                 position: static;
+            }
+
+            .como-section {
+                padding: 2rem 1.4rem !important;
             }
         }
 
@@ -2102,6 +2106,10 @@
             .arte-intro-grid .arte-head {
                 order: 1;
             }
+
+            .adquirir-btn-wrap {
+                margin-top: 3.5rem !important;
+            }
         }
 
         .arte-head h2 {
@@ -2407,9 +2415,9 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#sobre" onclick="closeMobile()">Sobre Mim</a>
-        <a href="#danca" onclick="closeMobile()">Dança</a>
-        <a href="#arte" onclick="closeMobile()">Arte</a>
         <a href="#psicologia" onclick="closeMobile()">Psicologia</a>
+        <a href="#arte" onclick="closeMobile()">Arte</a>
+        <a href="#danca" onclick="closeMobile()">Dança</a>
         <a href="#contacto" onclick="closeMobile()">Contacto</a>
     </div>
 
@@ -2419,8 +2427,8 @@
         <ul class="nav-links">
             <li><a href="#sobre">Sobre Mim</a></li>
             <li><a href="#psicologia">Psicologia</a></li>
-            <li><a href="#danca">Dança</a></li>
             <li><a href="#arte">Arte</a></li>
+            <li><a href="#danca">Dança</a></li>
         </ul>
         <a href="#contacto" class="nav-cta">Contacto</a>
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -2656,7 +2664,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rv" style="padding:2.8rem 0;">
+            <div class="rv como-section" style="padding:2.8rem 0;">
                 <div class="sobre-section-label" style="margin-bottom:1.5rem;position:static;">
                     <h4>Como?</h4>
                 </div>
@@ -2844,7 +2852,6 @@
             <div class="arte-intro-grid"
                 style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; margin-bottom:3.5rem;">
                 <div class="arte-head rv" style="margin-bottom:0;">
-                    <p class="s-tag">Arte</p>
                     <h2>Arte & Terapia</h2>
                     <p>A arte surge como expansão: uma forma de <span
                             style="color:var(--forest);font-weight:500">presença, criação e transformação
@@ -2974,7 +2981,7 @@
                 </div>
             </div>
 
-            <div style="text-align:center; margin-top:2rem;">
+            <div class="adquirir-btn-wrap" style="text-align:center; margin-top:2rem;">
                 <a href="#contacto" class="btn-p"
                     style="font-size:.75rem; padding:.9rem 2rem; display:inline-block; letter-spacing:.08em;">Adquirir
                     um quadro</a>
@@ -2982,6 +2989,62 @@
 
         </div>
     </section>
+
+    <div class="wave-divider" style="background:var(--cream)">
+        <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="40">
+            <path d="M0,20 C180,35 360,5 540,20 C720,35 900,5 1080,18 C1260,30 1380,12 1440,20 L1440,40 L0,40 Z"
+                fill="#f0e4cc" />
+        </svg>
+    </div>
+
+    <!-- DANÇA -->
+    <section id="danca" style="background:var(--cream2); scroll-margin-top:7rem;">
+        <div class="section-inner">
+            <div class="sobre-head rv">
+                <h2 class="rv d1" style="color:var(--forest);font-size:clamp(1.9rem,4vw,3.2rem);margin-bottom:.9rem;">
+                    Dança</h2>
+            </div>
+
+            <div class="sobre-section rv">
+                <div class="sobre-section-label">
+                    <h4>O que é?</h4>
+                </div>
+                <div class="sobre-section-body">
+                    <p>A dança é a oração do corpo. Quando as palavras não chegam, o movimento torna-se uma outra forma
+                        de comunicar e de expressar o seu mundo interior.</p>
+                    <p>Através da dança é possível fazer o seu processo interno também, de uma forma diferente, pode ser
+                        um complemento perfeito para quem faz terapia e para que não faz é uma outra forma de linguagem
+                        com o corpo, sobre o corpo, sobre o seu mundo interno, sobre si. Como sabemos o trauma está no
+                        corpo, e é pelo corpo que seguimos.</p>
+                </div>
+            </div>
+
+            <div class="sobre-section rv">
+                <div class="sobre-section-label">
+                    <h4>As Aulas</h4>
+                </div>
+                <div class="sobre-section-body">
+                    <p>As aulas de dança têm uma estrutura de 6 partes, em que vamos fluindo por cada uma delas.
+                        Conectamo-nos, meditamos, dançamos, temos dinâmicas individuais e a pares, relaxamos. Existe um
+                        princípio, um meio e um fim que não termina, levamos tudo isso que acontece para a nossa vida.
+                    </p>
+                    <p>As aulas de dança expressiva e movimento consciente acontecem todas as semanas. Contacta-me para
+                        mais informações.</p>
+                    <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+                        <a href="#contacto" class="btn-p"
+                            style="font-size:.75rem; padding:.9rem 2rem; display:inline-block; letter-spacing:.08em;">Mais
+                            info sobre as aulas de dança</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="quote-banner">
+        <p class="quote-txt rv">"A dança é a linguagem escondida da alma."</p>
+        <p class="quote-attr rv d1">Martha Graham</p>
+    </div>
 
     <template>
         <!-- ABORDAGEM -->
