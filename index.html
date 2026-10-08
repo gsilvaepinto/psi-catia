@@ -170,7 +170,7 @@
         }
 
         .nav-logo img {
-            height: 160px;
+            height: 190px;
             width: auto;
             transition: height .4s ease;
             margin-top: 12px;
@@ -283,7 +283,7 @@
             display: grid;
             grid-template-columns: 1.3fr 0.7fr;
             align-items: center;
-            padding: 14rem 5% 4rem;
+            padding: 16rem 5% 4rem;
             gap: 3rem;
             position: relative;
             overflow: hidden;
@@ -586,12 +586,12 @@
 
         .quote-txt {
             font-family: 'Cormorant Upright', serif;
-            font-size: clamp(1.6rem, 3.8vw, 3rem);
+            font-size: clamp(1.8rem, 4.2vw, 3.4rem);
             font-weight: 300;
             font-style: italic;
             line-height: 1.45;
             color: var(--cream);
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto 1.2rem;
         }
 
@@ -1422,7 +1422,7 @@
 
         /* ── CONTACTO ── */
         #contacto {
-            background: var(--cream2);
+            background: var(--cream);
             scroll-margin-top: 7rem;
         }
 
@@ -1607,9 +1607,10 @@
 
         /* ── FOOTER ── */
         footer {
-            background: var(--cream);
+            background: var(--cream2);
             color: var(--txt2);
-            padding: 2.8rem 5%;
+            padding: 4rem 5%;
+            margin-top: 2rem;
         }
 
         .foot-inner {
@@ -2104,6 +2105,10 @@
                 order: 2;
             }
 
+            #danca .arte-intro-grid .hero-img-wrap {
+                margin-top: 1.5rem !important;
+            }
+
             .arte-intro-grid .arte-head {
                 order: 1;
             }
@@ -2417,8 +2422,8 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="#sobre" onclick="closeMobile()">Sobre Mim</a>
         <a href="#psicologia" onclick="closeMobile()">Psicologia</a>
-        <a href="#arte" onclick="closeMobile()">Arte</a>
         <a href="#danca" onclick="closeMobile()">Dança</a>
+        <a href="#arte" onclick="closeMobile()">Arte</a>
         <a href="#contacto" onclick="closeMobile()">Contacto</a>
     </div>
 
@@ -2428,8 +2433,8 @@
         <ul class="nav-links">
             <li><a href="#sobre">Sobre Mim</a></li>
             <li><a href="#psicologia">Psicologia</a></li>
-            <li><a href="#arte">Arte</a></li>
             <li><a href="#danca">Dança</a></li>
+            <li><a href="#arte">Arte</a></li>
         </ul>
         <a href="#contacto" class="nav-cta">Contacto</a>
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -2840,15 +2845,117 @@
         </div>
     </section>
 
+
+
     <div class="wave-divider" style="background:var(--cream2)">
         <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="40">
-            <path d="M0,15 C200,5 400,30 600,15 C800,0 1000,28 1200,15 C1320,8 1400,22 1440,15 L1440,40 L0,40 Z"
+            <path d="M0,20 C180,35 360,5 540,20 C720,35 900,5 1080,18 C1260,30 1380,12 1440,20 L1440,40 L0,40 Z"
                 fill="#faf3e8" />
         </svg>
     </div>
 
+    <!-- DANÇA -->
+    <section id="danca" style="background:var(--cream); scroll-margin-top:7rem; padding-top:2.4rem;">
+        <div class="section-inner">
+            <div class="arte-intro-grid"
+                style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; margin-bottom:3.5rem;">
+                <div class="rv">
+                    <div class="sobre-head">
+                        <h2 class="rv d1"
+                            style="color:var(--forest);font-size:clamp(1.9rem,4vw,3.2rem);margin-bottom:.9rem;">Dança
+                        </h2>
+                    </div>
+                    <div class="sobre-section rv" style="display:block;">
+                        <div class="sobre-section-label" style="margin-bottom:1.2rem;">
+                            <h4>O que é?</h4>
+                        </div>
+                        <div class="sobre-section-body">
+                            <p>A dança é a <span style="color:var(--forest);font-weight:500">oração do corpo</span>.
+                                Quando as palavras não chegam, o <span
+                                    style="color:var(--forest);font-weight:500">movimento torna-se uma outra forma de
+                                    comunicar</span> e de expressar o seu mundo interior.</p>
+                            <p>Através da dança é possível fazer o seu <span
+                                    style="color:var(--forest);font-weight:500">processo interno</span> também, de uma
+                                forma diferente, pode ser um <span
+                                    style="color:var(--forest);font-weight:500">complemento perfeito para quem faz
+                                    terapia</span> e para que não faz é uma outra forma de linguagem com o corpo, sobre
+                                o corpo, sobre o seu mundo interno, sobre si. Como sabemos o <span
+                                    style="color:var(--forest);font-weight:500">trauma está no corpo</span>, e é pelo
+                                corpo que seguimos.</p>
+                        </div>
+                    </div>
+                    <div class="sobre-section rv" style="display:block;">
+                        <div class="sobre-section-label" style="margin-bottom:1.2rem;">
+                            <h4>As Aulas</h4>
+                        </div>
+                        <div class="sobre-section-body">
+                            <p>As aulas de dança têm uma estrutura de <span
+                                    style="color:var(--forest);font-weight:500">6 partes</span>, em que vamos fluindo
+                                por cada uma delas. <span style="color:var(--forest);font-weight:500">Conectamo-nos,
+                                    meditamos, dançamos</span>, temos dinâmicas individuais e a pares, relaxamos. Existe
+                                um princípio, um meio e um fim que não termina, levamos tudo isso que acontece para a
+                                nossa vida. Cada aula é única e iremos ouvir muitos estilos de música diferentes, do
+                                <span style="color:var(--forest);font-weight:500">rock ao fado, do jazz à música
+                                    portuguesa, brasileira e africana</span>, passando pelas sevilhanas, salsa e tango.
+                                Tudo isso irá também enriquecer a tua <span
+                                    style="color:var(--forest);font-weight:500">cultura musical</span> tornando-a mais
+                                rica mesmo que não gostes de tudo.
+                            </p>
+                            <p>As aulas de dança expressiva e movimento consciente acontecem <span
+                                    style="color:var(--forest);font-weight:500">todas as semanas</span>. Contacta-me
+                                para mais informações.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-img-wrap rv d1"
+                    style="max-width:500px; margin:5rem auto 0; transform:translateX(4rem);">
+                    <div class="hero-img-frame">
+                        <img src="catia_danca.jpeg" alt="Cátia Raposo — Dança">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pillars rv" style="margin-top:2rem;">
+                <div class="pillar" style="background:transparent;">
+                    <p>Não é importante saber dançar, é importante <span
+                            style="color:var(--forest);font-weight:500">estar disponível para dançar</span>, para se
+                        <span style="color:var(--forest);font-weight:500">conectar com o corpo</span>, com ritmos, e
+                        para <span style="color:var(--forest);font-weight:500">dinâmicas individuais e a pares</span>.
+                        Nesse processo <span style="color:var(--forest);font-weight:500">conhecemos melhor o nosso
+                            corpo</span>, o que gostamos mais e o que não gostamos. Se somos de movimentos de <span
+                            style="color:var(--forest);font-weight:500">abrir ou fechar</span>, se preferimos <span
+                            style="color:var(--forest);font-weight:500">rodopiar ou ficar no lugar</span>, se é o <span
+                            style="color:var(--forest);font-weight:500">chão que nos prende ou o céu que nos
+                            chama</span>, se preferimos <span style="color:var(--forest);font-weight:500">dançar a sós
+                            ou a pares</span>. E em cada sessão podes mudar, podes ir descobrindo outras formas e
+                        perspetivas.</p>
+                </div>
+                <div class="pillar" style="background:transparent;">
+                    <p>É possível <span style="color:var(--forest);font-weight:500">dançar o que sentimos</span>, o que
+                        queremos expressar mas <span style="color:var(--forest);font-weight:500">não conseguimos pôr em
+                            palavras</span>, é possível dançar os nossos <span
+                            style="color:var(--forest);font-weight:500">pensamentos</span>, os nossos <span
+                            style="color:var(--forest);font-weight:500">desejos</span>. <span
+                            style="color:var(--forest);font-weight:500">O corpo sabe.</span></p>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:2.5rem;">
+                <a href="#contacto" class="btn-p"
+                    style="font-size:.75rem; padding:.9rem 2rem; display:inline-block; letter-spacing:.08em;">Mais info
+                    sobre as aulas de dança</a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="quote-banner">
+        <p class="quote-txt rv">"A dança é a linguagem escondida da alma."</p>
+        <p class="quote-attr rv d1">Martha Graham</p>
+    </div>
+
     <!-- ARTE -->
-    <section id="arte">
+    <section id="arte" style="background:var(--cream2); scroll-margin-top:7rem;">
         <div class="section-inner">
             <div class="arte-intro-grid"
                 style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; margin-bottom:3.5rem;">
@@ -2886,17 +2993,17 @@
             </div>
 
             <div class="pillars rv" style="margin-bottom:3rem;">
-                <div class="pillar">
+                <div class="pillar" style="background:transparent;">
                     <h3>Ausência de Julgamento</h3>
                     <p>Não é preciso responder a expetativas estéticas ou regras formais. O valor do trabalho reside no
                         significado que ele tem para quem o cria, e não na avaliação externa.</p>
                 </div>
-                <div class="pillar">
+                <div class="pillar" style="background:transparent;">
                     <h3>Acesso ao Inconsciente</h3>
                     <p>A espontaneidade e a interação livre com materiais contornam as defesas racionais e os filtros
                         lógicos do cérebro, permitindo que as emoções reprimidas venham à superfície.</p>
                 </div>
-                <div class="pillar">
+                <div class="pillar" style="background:transparent;">
                     <h3>Escolha</h3>
                     <p>No processo criativo, decidem-se as cores, as formas, os ritmos ou os cortes. Essa tomada de
                         decisão desenvolve uma sensação de controlo e autonomia — fundamental para quem se sente
@@ -2990,62 +3097,6 @@
 
         </div>
     </section>
-
-    <div class="wave-divider" style="background:var(--cream)">
-        <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="40">
-            <path d="M0,20 C180,35 360,5 540,20 C720,35 900,5 1080,18 C1260,30 1380,12 1440,20 L1440,40 L0,40 Z"
-                fill="#f0e4cc" />
-        </svg>
-    </div>
-
-    <!-- DANÇA -->
-    <section id="danca" style="background:var(--cream2); scroll-margin-top:7rem; padding-top:2.4rem;">
-        <div class="section-inner">
-            <div class="sobre-head rv">
-                <h2 class="rv d1" style="color:var(--forest);font-size:clamp(1.9rem,4vw,3.2rem);margin-bottom:.9rem;">
-                    Dança</h2>
-            </div>
-
-            <div class="sobre-section rv">
-                <div class="sobre-section-label">
-                    <h4>O que é?</h4>
-                </div>
-                <div class="sobre-section-body">
-                    <p>A dança é a oração do corpo. Quando as palavras não chegam, o movimento torna-se uma outra forma
-                        de comunicar e de expressar o seu mundo interior.</p>
-                    <p>Através da dança é possível fazer o seu processo interno também, de uma forma diferente, pode ser
-                        um complemento perfeito para quem faz terapia e para que não faz é uma outra forma de linguagem
-                        com o corpo, sobre o corpo, sobre o seu mundo interno, sobre si. Como sabemos o trauma está no
-                        corpo, e é pelo corpo que seguimos.</p>
-                </div>
-            </div>
-
-            <div class="sobre-section rv">
-                <div class="sobre-section-label">
-                    <h4>As Aulas</h4>
-                </div>
-                <div class="sobre-section-body">
-                    <p>As aulas de dança têm uma estrutura de 6 partes, em que vamos fluindo por cada uma delas.
-                        Conectamo-nos, meditamos, dançamos, temos dinâmicas individuais e a pares, relaxamos. Existe um
-                        princípio, um meio e um fim que não termina, levamos tudo isso que acontece para a nossa vida.
-                    </p>
-                    <p>As aulas de dança expressiva e movimento consciente acontecem todas as semanas. Contacta-me para
-                        mais informações.</p>
-                    <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
-                        <a href="#contacto" class="btn-p"
-                            style="font-size:.75rem; padding:.9rem 2rem; display:inline-block; letter-spacing:.08em;">Mais
-                            info sobre as aulas de dança</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="quote-banner">
-        <p class="quote-txt rv">"A dança é a linguagem escondida da alma."</p>
-        <p class="quote-attr rv d1">Martha Graham</p>
-    </div>
 
     <template>
         <!-- ABORDAGEM -->
@@ -3724,4 +3775,4 @@
 
 </body>
 
-</html>
+</html>f
