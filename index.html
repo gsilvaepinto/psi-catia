@@ -3860,24 +3860,35 @@
         }
 
         // Cookie consent logic
-        let consent = null;
-        try { consent = localStorage.getItem('cookie_consent'); } catch (e) { }
-
-        if (consent === 'accepted') {
-            loadAnalytics();
-        } else if (!consent) {
-            document.getElementById('cookieBanner').style.display = 'flex';
+        function getConsent() {
+            try { return localStorage.getItem('cookie_consent'); } catch (e) { }
+            try { return sessionStorage.getItem('cookie_consent'); } catch (e) { }
+            return null;
+        }
+        function setConsent(val) {
+            try { localStorage.setItem('cookie_consent', val); } catch (e) { }
+            try { sessionStorage.setItem('cookie_consent', val); } catch (e) { }
         }
 
-        document.getElementById('cookieAccept').addEventListener('click', function () {
-            try { localStorage.setItem('cookie_consent', 'accepted'); } catch (e) { }
-            document.getElementById('cookieBanner').style.display = 'none';
-            loadAnalytics();
-        });
+        window.addEventListener('DOMContentLoaded', function () {
+            var consent = getConsent();
+            var banner = document.getElementById('cookieBanner');
+            if (consent === 'accepted') {
+                loadAnalytics();
+            } else if (!consent || consent === 'null') {
+                banner.style.display = 'flex';
+            }
 
-        document.getElementById('cookieReject').addEventListener('click', function () {
-            try { localStorage.setItem('cookie_consent', 'rejected'); } catch (e) { }
-            document.getElementById('cookieBanner').style.display = 'none';
+            document.getElementById('cookieAccept').addEventListener('click', function () {
+                setConsent('accepted');
+                banner.style.display = 'none';
+                loadAnalytics();
+            });
+
+            document.getElementById('cookieReject').addEventListener('click', function () {
+                setConsent('rejected');
+                banner.style.display = 'none';
+            });
         });
 
     </script>
